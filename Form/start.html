@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Lesson</title>
+
+  </head>
+
+  <body>
+    <div style="text-align: center;">
+      <h1 style="font-family: Arial, Helvetica, sans-serif;">Registration Form</h1>
+      <form action="/action_page.php">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="fname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="johndoe@gmail.com"><br><br>
+        <label for="passwd">Password:</label>
+        <input type="password" id="passwd" name="passwd" placeholder="Must have at least 6 characters"><br><br>
+        <label for="num">Telephone Number:</label>
+        <input type="tel" id="num" name="num" placeholder="+9053********"><br><br>
+      </form>
+      <form action="/action_page.php">
+        <h3><b>Choose Your Plan</b></h3>
+        <input type="radio" id="1" name="a">
+        <label for="1">Basic Plan: 15€</label>&nbsp;&nbsp;
+        <input type="radio" id="2" name="a" checked>
+        <label for="2">Standard Plan: 25€</label>&nbsp;&nbsp;
+        <input type="radio" id="3" name="a">
+        <label for="3">Pro Plan: 35€</label><br><br>
+      </form>
+      <form action="/action_page.php">
+        <label for="cn">Card Number:</label>
+        <input type="text" id="cn" name="cn">&nbsp;&nbsp;
+        <label for="fname">CVC:</label>
+        <input type="text" id="cvc" name="cvc"><br><br>
+        <label for="dt">Expiration Date:</label>
+        <input type="date" id="dt" name="dt"><br><br>
+        <h4>Billing Address</h4>
+        <textarea name="billingAddress" id="addrss" cols="30" rows="10">Enter your addresss here...</textarea>&nbsp;&nbsp;
+        <input type="submit">
+      </form>
+      
+    </div>
+
+  </body>
+</html>
