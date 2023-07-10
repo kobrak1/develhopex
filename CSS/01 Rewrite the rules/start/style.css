@@ -1,0 +1,14 @@
+body {
+    background-color: var(--main-color);
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background-color: var(--circle-color);
+    border-radius: 50px;
+}
+:root {
+    --main-color:azure;
+    --circle-color: lime;
+}
