@@ -30,7 +30,6 @@
       header {
         position: relative;
         background-color: rgb(211, 211, 211, .2);
-        backdrop-filter: blur(2px);
         margin: 1.2rem;
       }
       .navbar {
@@ -51,10 +50,15 @@
       .nav-items a {
         padding: 1.15rem;
       }
+      .searchbar {
+        margin-left: auto;
+        scale: 1.4;
+        opacity: .7;
+      }
       .account {
         display: flex;
         background-color: rgba(244, 186, 99, 0.2);
-        margin-left: auto;
+        margin-left: 4rem;
         font-size: 1.2rem;
         padding: 1.15rem;
       }
@@ -86,6 +90,7 @@
         border-radius: 10px;
         width: 300px;
         right: 1.8rem;
+        top: 4.5rem;
       }
       .dropdwn-menu li {
         padding: 1rem;
@@ -100,6 +105,7 @@
         .navbar .toggle-btn {display: block;}
         .dropdwn-menu {display: block;}
         header {background-color: transparent;}
+        .searchbar{display: none;}
       }
 
     </style>
@@ -114,6 +120,13 @@
           <li><a href="">Products</a></li>
           <li><a href="">FAQ</a></li>
         </ul>
+              <!--SEARCHBAR DESIGN-->
+        <div class="searchbar">
+          <form action="">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
         <div class="account"><a href="">Login</a></div>
         <div class="toggle-btn"><i class="fa-solid fa-bars"></i></div>
       </div>
