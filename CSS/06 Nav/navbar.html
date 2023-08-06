@@ -131,10 +131,8 @@
         </ul>
               <!--SEARCHBAR DESIGN-->
         <div class="searchbar">
-          <form action="">
-            <input type="text" placeholder="Search...">
-            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-          </form>
+          <input id="search" type="text" placeholder="Search...">
+          <button id="delete" type="submit" onclick="deleteData()"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
         <div class="account"><a href="">Login</a></div>
         <div class="toggle-btn"><i class="fa-solid fa-bars"></i></div>
@@ -148,5 +146,28 @@
         <li><a href="" style="color: rgba(244, 186, 99);"><b>Login</b></a></li>
       </div>
     </header>
+    <script>
+      const searchInput = document.getElementById("search");
+
+      //function to add the data to local storage
+      searchInput.addEventListener('keydown', (event) => {
+        if (event.key === "Enter") {
+          sendData();
+        }
+      });
+      //function to delete all data from local storage
+      function sendData() {
+        let storedData = localStorage.getItem('userData');
+        storedData = storedData ? JSON.parse(storedData) : [];
+        //add new data
+        storedData.push(searchInput.value)
+        //set item
+        localStorage.setItem('userData', JSON.stringify(storedData));
+      };
+      //localStorage.clear();
+      function deleteData() {
+        localStorage.clear()
+      };
+    </script>
   </body>
 </html>
